@@ -11,7 +11,7 @@ df = pd.read_excel('./templates/questions.xlsx')  # questions must be in the fir
 df = df.sample(frac=1).reset_index(drop=True)
 
 # Load the existing PowerPoint template
-template_path = './templates/triviappt.pptx'
+template_path = './templates/triviappt99.pptx'
 presentation = Presentation(template_path)
 
 # Define the slide layout index for question slides
@@ -29,7 +29,7 @@ for _, row in df.iterrows():
 
     # Add the random answers to the slide
     for i, answer in enumerate(answers):
-        j =  i+10
+        j =  i+11
         content = slide.placeholders[j].text_frame
         content.text = answer
 
@@ -39,7 +39,7 @@ for _, row in df.iterrows():
 
     # Add the answers to the slide, highlighting the correct answer
     for i, answer in enumerate(answers):
-        j = i+10
+        j = i+11
         content = slide.placeholders[j].text_frame
         content.text = answer
         content.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE

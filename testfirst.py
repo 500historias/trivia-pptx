@@ -3,7 +3,7 @@ import pandas as pd
 from pptx import Presentation
 
 # Load the existing PowerPoint template
-template_path = './templates/triviappt.pptx'
+template_path = './templates/triviappt99.pptx'
 presentation = Presentation(template_path)
 
 slide = presentation.slides.add_slide(presentation.slide_layouts[0])
